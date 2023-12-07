@@ -1,0 +1,49 @@
+<%- include('templates/cabecera.ejs')%>
+<div class="container">
+    <a href="/notanew"class="btn btn-primary mt-4"> Nueva Nota</a>
+    <table class="table table-hover mt-4" >
+        <thead>
+            <tr>
+                <th>IdAlumno</th>
+                <th>IdCurso</th>
+                <th>IdAula</th>
+                <th>IdDocente</th>
+                <th>Practicas</th>
+                <th>Parcial</th>
+                <th>Final</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach((user)=>{%>
+                <tr>
+                    <td>
+                        <%= user.IdAlumno %>
+                    </td>
+                    <td>
+                        <%=user.IdCurso %>
+                    </td>
+                    <td>
+                        <%=user.IdAula %>
+                    </td>
+                    <td>
+                        <%=user.IdDocente %>
+                    </td>
+                    <td>
+                        <%=user.Practicas %>
+                    </td>
+                    <td>
+                        <%=user.Parcial %>
+                    </td>
+                    <td>
+                        <%=user.Final %>
+                    </td>
+                    <td>
+                        <a href="/notaedit/<%= user.IdAlumno %>/<%= user.IdCurso %>/<%= user.IdAula %>/<%= user.IdDocente %>"class="btn btn-success">Editar</a>
+                        <a href="/notadelete/<%= user.IdAlumno %>/<%= user.IdCurso %>/<%= user.IdAula %>/<%= user.IdDocente %>"class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                <%})%>
+        </tbody>
+    </table>
+</div>

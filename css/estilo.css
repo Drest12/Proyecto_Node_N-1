@@ -1,0 +1,28 @@
+.banner_img{
+    margin: auto;
+    height:500px;
+    width:100%;
+    
+}
+.img{
+    margin: auto;
+    height:200px;
+    width:100%;
+}
+.container-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.cabecera-info{
+    text-align: right;
+}
+.alert-center{
+    text-align: center;
+}
+.container-map{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

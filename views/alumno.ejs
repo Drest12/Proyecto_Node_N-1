@@ -1,0 +1,42 @@
+<%- include("templates/cabecera")%>
+<!--Contenido----------------------------------------------------------------->
+<div class="container">
+    <a href="/alumnonew"class="btn btn-primary mt-4"> Nuevo Alumno</a>
+    <table class="table table-hover mt-4" >
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach((user)=>{%>
+                <tr>
+                    <td>
+                        <%= user.IdAlumno %>
+                    </td>
+                    <td>
+                        <%=user.Nombres %>
+                    </td>
+                    <td>
+                        <%=user.Apellidos %>
+                    </td>
+                    <td>
+                        <%=user.Correo %>
+                    </td>
+                    <td>
+                        <%=user.Telefono %>
+                    </td>
+                    <td>
+                        <a href="/alumnoedit/<%= user.IdAlumno %>"class="btn btn-success">Editar</a>
+                        <a href="/alumnodelete/<%= user.IdAlumno %>"class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                <%})%>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,43 @@
+<%- include("templates/cabecera.ejs")%>
+
+
+
+    <div class="container mt-4">
+        <div class="card border-danger">
+            <div class="card-header"><h3>Modificar Registro</h3></div>
+            <div class="card-body">
+                <form action="/notaedit" method="post">
+                    <div class="mb-3">
+                        <label for="codigo" class="from-label">IdAlumno:</label>
+                        <input type="text" class="form-control" value="<%=results.IdAlumno%>" id="idAlu" name="idAlu" tabindex="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="from-label">IdCurso:</label>
+                        <input type="text" class="form-control" value="<%=results.IdCurso%>" id="idCur" name="idCur" tabindex="2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">IdAula:</label>
+                        <input type="text" class="form-control" value="<%=results.IdAula%>" id="idAul" name="idAul" tabindex="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">IdDocente:</label>
+                        <input type="text" class="form-control" value="<%=results.IdDocente%>" id="idDoc" name="idDoc" tabindex="4">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">Practicas:</label>
+                        <input type="text" class="form-control" value="<%=results.Practicas%>" id="pra" name="pra" tabindex="5">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">Parcial:</label>
+                        <input type="text" class="form-control" value="<%=results.Parcial%>" id="par" name="par" tabindex="5">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">Final:</label>
+                        <input type="text" class="form-control" value="<%=results.Final%>" id="fin" name="fin" tabindex="5">
+                    </div>
+                    <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
+                    <a href="/nota" class="btn btn-warning">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>

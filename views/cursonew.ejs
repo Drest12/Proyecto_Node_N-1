@@ -1,0 +1,28 @@
+<%- include("templates/cabecera")%>
+<div class="container mt-4">
+    <div class="card border-danger">
+        <div class="card-header"><h3>Nuevo Registro Curso</h3></div>
+            <div class="card-body">
+                <form action="/savecurso" method="post">
+                    <div class="mb-3">
+                        <label for="codigo" class="from-label">IdCurso:</label>
+                        <input type="text" class="form-control" id="id" name="id" tabindex="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="from-label">Curso:</label>
+                        <input type="text" class="form-control" id="cur" name="cur" tabindex="2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">Creditos:</label>
+                        <input type="text" class="form-control" id="cre" name="cre" tabindex="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditos" class="from-label">PreRequisito:</label>
+                        <input type="text" class="form-control" id="pre" name="pre" tabindex="3">
+                    </div>
+                    <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
+                    <a href="/curso" class="btn btn-warning">Cancelar</a>
+                </form>
+            </div>
+    </div>
+</div>

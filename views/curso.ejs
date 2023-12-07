@@ -1,0 +1,37 @@
+<%- include('templates/cabecera.ejs')%>
+<div class="container">
+    <a href="/cursonew"class="btn btn-primary mt-4"> Nuevo Curso</a>
+    <table class="table table-hover mt-4" >
+        <thead>
+            <tr>
+                <th>IdCurso</th>
+                <th>Curso</th>
+                <th>Creditos</th>
+                <th>PreRequisito</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach((user)=>{%>
+                <tr>
+                    <td>
+                        <%= user.IdCurso %>
+                    </td>
+                    <td>
+                        <%=user.Curso %>
+                    </td>
+                    <td>
+                        <%=user.Creditos %>
+                    </td>
+                    <td>
+                        <%=user.PreRequisito %>
+                    </td>
+                    <td>
+                        <a href="/cursoedit/<%= user.IdCurso %>"class="btn btn-success">Editar</a>
+                        <a href="/cursodelete/<%= user.IdCurso %>"class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                <%})%>
+        </tbody>
+    </table>
+</div>
